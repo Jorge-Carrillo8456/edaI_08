@@ -1,4 +1,4 @@
-#include "listaligada.h"
+#include "../include/listaligada.h"
 
 Dlista *lista_crear(){
     Dlista *nuevo = (Dlista *)malloc(sizeof(Dlista));
