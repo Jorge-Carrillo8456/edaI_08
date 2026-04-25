@@ -1,4 +1,4 @@
-#include <nodo.h>
+#include "../include/nodo.h"
 
 Nodo *nodo_crear(void *dato, size_t size){
     Nodo *nuevo =(Nodo *)malloc(sizeof(Nodo));
