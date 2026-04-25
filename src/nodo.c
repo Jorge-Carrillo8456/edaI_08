@@ -1,12 +1,12 @@
-#include "nodo.h"
+#include <nodo.h>
 
-Nodo *nodo_crear(void *info, size_t size){
+Nodo *nodo_crear(void *dato, size_t size){
     Nodo *nuevo =(Nodo *)malloc(sizeof(Nodo));
     if(nuevo!=NULL){
         nuevo->sig = NULL;
         nuevo->ant = NULL;
         nuevo->info = malloc(size);
-        memcpy(nuevo->info, info, size);
+        memcpy(nuevo->info, dato, size);
     }
     return nuevo;
 }
@@ -20,11 +20,11 @@ void nodo_eliminar(Nodo *nodo){
     }
 }
 
-bool nodo_actualizar(Nodo *nodo, void *info, size_t size){
+bool nodo_actualizar(Nodo *nodo, void *dato, size_t size){
     if(nodo!=NULL){
         nodo->info = realloc(nodo->info, size);
         if(!nodo->info) return false;
-        memcpy(nodo->info, info, size);
+        memcpy(nodo->info, dato, size);
     }
     return true;
 }
