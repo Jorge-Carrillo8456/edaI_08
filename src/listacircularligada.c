@@ -1,5 +1,4 @@
-
-#include "listacirculardoble.h"
+#include "../include/listacircularligada.h"
 
 CDlista *lista_crear(){
     CDlista *nuevo = (CDlista *)malloc(sizeof(CDlista));
