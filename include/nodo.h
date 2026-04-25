@@ -6,6 +6,7 @@
 #include <stddef.h>
 #include <string.h>
 #include <stdbool.h>
+#include <math.h>
 
 
 typedef struct Nodo Nodo;
@@ -15,8 +16,8 @@ struct Nodo{
     Nodo *ant;
 };
 
-Nodo *nodo_crear(void *info, size_t size);
+Nodo *nodo_crear(void *dato, size_t size);
 void nodo_eliminar(Nodo *nodo);
-bool nodo_actualizar(Nodo *nodo, void *info, size_t size);
+bool nodo_actualizar(Nodo *nodo, void *dato, size_t size);
 
 #endif
